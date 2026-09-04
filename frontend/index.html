@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rakhivhani Thendo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+</head>
+
+<body>
+
+  <nav class="nav">
+    <span class="nav-name">RT</span>
+    <div class="nav-links">
+      <a onclick="showPage('home')">about</a>
+      <a onclick="showPage('translation')">translation</a>
+      <a onclick="showPage('coding')">coding</a>
+      <a onclick="showPage('writing')">writing</a>
+    </div>
+  </nav>
+
+  <div id="home" class="page active">
+    <div class="hero">
+      <p class="hero-eyebrow">ML ENGINEER · AI ENGINEER · JOHANNESBURG</p>
+      <h1 class="hero-name">Rakhivhani<br>Thendo</h1>
+      <p class="hero-bio">I build machine learning systems from scratch — transformers, inference pipelines, and deployed AI products. Currently finishing a BSc Computer Science at Wits University.</p>
+      <div class="hero-links">
+        <button class="primary" onclick="showPage('translation')">Try the demos</button>
+        <button onclick="showPage('writing')">Read the writeups</button>
+        <button onclick="window.open('https://github.com/THENDO1977')">GitHub</button>
+        <button onclick="window.open('https://huggingface.co/THENDO1977')">Hugging Face</button>
+      </div>
+    </div>
+
+    <p class="section-label">PROJECTS</p>
+    <div class="project-grid">
+      <div class="project-card" onclick="showPage('translation')">
+        <span class="project-tag mle">MLE</span>
+        <p class="project-title">EN→FR translation transformer</p>
+        <p class="project-desc">Encoder-decoder transformer built from scratch, trained on Opus100 (800k+ pairs). Fine-tuned on medical domain. 30M parameters.</p>
+        <div class="project-footer"><span class="project-link">→ live demo</span></div>
+      </div>
+      <div class="project-card" onclick="showPage('coding')">
+        <span class="project-tag mle">MLE</span>
+        <p class="project-title">70M coding model</p>
+        <p class="project-desc">Decoder-only transformer pretrained on CodeParrot (~1.7B tokens). Autoregressive code completion with FIM training objective.</p>
+        <div class="project-footer"><span class="project-link">→ live demo</span></div>
+      </div>
+      <div class="project-card no-demo" onclick="window.open('https://github.com/genericmaster/tla-advisor-')">
+        <span class="project-tag ai">AI ENGINEER</span>
+        <p class="project-title">TLA Advisor</p>
+        <p class="project-desc">A conversational support assistant for IT staff. Ask it about a building issue and it pulls relevant solutions from an institutional knowledge base. Staff can flag wrong answers — corrections go through a review pipeline and improve future responses over time</p>
+        <div class="project-footer"><span class="project-link">→ GitHub</span></div>
+      </div>
+      <div class="project-card no-demo" onclick="window.open('https://github.com/genericmaster/ticket-router-glpi')">
+        <span class="project-tag ai">AI ENGINEER</span>
+        <p class="project-title">GLPI ticket router</p>
+        <p class="project-desc">Automatically assigns incoming IT support tickets to the right team using a local language model. No manual triage needed — the model reads the ticket, decides who handles it, and updates the ticket in GLPI instantly.</p>
+        <div class="project-footer"><span class="project-link">→ GitHub</span></div>
+      </div>
+      <div class="project-card no-demo">
+        <span class="project-tag ai">AI ENGINEER</span>
+        <p class="project-title">Multimodal voice assistant</p>
+        <p class="project-desc">Voice-first assistant with vision routing. Whisper STT → Qwen3.5:9b for language and vision reasoning → XTTS v2 TTS. Routes between modalities based on request context.</p>
+        <div class="project-footer"><span class="project-link">→ GitHub</span></div>
+      </div>
+      <div class="project-card no-demo" onclick="window.open('https://github.com/BUBS-Wits/report-wiza')">
+        <span class="project-tag se">SOFTWARE ENGINEERING</span>
+        <p class="project-title">Report-Wiza</p>
+        <p class="project-desc">Ward-level municipal service delivery reporting portal built for South African residents. React + Node.js + Firebase + Azure. Real SA ward boundary data via StatsSA and Electoral Commission APIs.</p>
+        <div class="project-footer"><span class="project-link">→ GitHub</span></div>
+      </div>
+      <div class="project-card no-demo">
+        <span class="project-tag scratch">FROM SCRATCH</span>
+        <p class="project-title">Deep learning from scratch</p>
+        <p class="project-desc">Full neural network with optimizers, CNN, RNN, encoder-decoder, and transformer — all implemented in pure PyTorch with no high-level abstractions.</p>
+        <div class="project-footer"><span class="project-link">→ GitHub</span></div>
+      </div>
+      <div class="project-card no-demo">
+        <span class="project-tag scratch">FROM SCRATCH</span>
+        <p class="project-title">Classical ML from scratch</p>
+        <p class="project-desc">Linear regression and KMeans implemented from first principles. Includes visualizations of decision boundaries and cluster convergence.</p>
+        <div class="project-footer"><span class="project-link">→ GitHub</span></div>
+      </div>
+      <div class="project-card no-demo">
+        <span class="project-tag scratch">FROM SCRATCH</span>
+        <p class="project-title">Word2Vec — two implementations</p>
+        <p class="project-desc">Skip-gram Word2Vec from scratch on a Harry Potter corpus, plus a faithful replication of the original Mikolov et al. paper. Includes 2D dimensionality-reduced cluster visualizations.</p>
+        <div class="project-footer"><span class="project-link">→ GitHub</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="translation" class="page">
+    <p class="section-label">MODEL DEMO</p>
+    <h2 class="page-title">EN→FR translation</h2>
+    <p class="page-desc">30M parameter encoder-decoder transformer trained from scratch on Opus100 (800k+ sentence pairs). Toggle between the base model and a medical domain fine-tune to see how fine-tuning shifts the output distribution.</p>
+    <div class="example-bar">
+      <span class="example-label">Try an example:</span>
+      <button class="example-btn" onclick="setTransInput('The cat sat on the mat and looked out the window.')">General</button>
+      <button class="example-btn" onclick="setTransInput('The patient presented with acute myocardial infarction and was administered thrombolytic therapy.')">Medical</button>
+      <button class="example-btn" onclick="setTransInput('She opened the door and found a letter on the floor.')">Narrative</button>
+    </div>
+    <div class="demo-container">
+      <div class="demo-panel">
+        <h3>English input</h3>
+        <textarea id="trans-input" placeholder="Enter an English sentence..."></textarea>
+        <div class="demo-controls">
+          <select id="trans-variant">
+            <option value="base">Base model</option>
+            <option value="finetuned">Medical fine-tune</option>
+          </select>
+          <div class="param-group">
+            <label class="param-label">Max length <span class="tooltip" title="Maximum number of tokens to generate.">?</span></label>
+            <input type="number" id="trans-maxlen" value="128" min="32" max="256">
+          </div>
+          <div class="param-group">
+            <label class="param-label">Temperature <span class="tooltip" title="Controls randomness. Lower = more predictable, higher = more creative.">?</span></label>
+            <input type="number" id="trans-temp" value="1.0" min="0.1" max="2.0" step="0.1">
+          </div>
+          <div class="param-group">
+            <label class="param-label">Top-p <span class="tooltip" title="Nucleus sampling. Samples from the smallest set of tokens whose cumulative probability exceeds p.">?</span></label>
+            <input type="number" id="trans-topp" value="0.9" min="0.1" max="1.0" step="0.05">
+          </div>
+          <button class="run-btn" onclick="runTranslation()">Translate</button>
+        </div>
+      </div>
+      <div class="demo-panel">
+        <h3>French output</h3>
+        <div class="output-area" id="trans-output"><span class="output-placeholder">Translation appears here</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="coding" class="page">
+    <p class="section-label">MODEL DEMO</p>
+    <h2 class="page-title">Code completion</h2>
+    <p class="page-desc">70M parameter decoder-only transformer pretrained on CodeParrot. Start a Python function and the model completes it autoregressively. Trained on production-style code — realistic function signatures give the best results.</p>
+    <div class="example-bar">
+      <span class="example-label">Shuffle example:</span>
+      <button class="example-btn" onclick="shuffleCodeExample()">↻ Random prompt</button>
+    </div>
+    <div class="demo-container">
+      <div class="demo-panel">
+        <h3>Code prefix</h3>
+        <textarea id="code-input" placeholder="def parse_config(file_path:str):&#10;    ..."></textarea>
+        <div class="demo-controls">
+          <select id="code-variant">
+            <option value="base">Base model</option>
+            <option value="finetuned">Fine-tuned</option>
+          </select>
+          <div class="param-group">
+            <label class="param-label">Max length <span class="tooltip" title="Maximum number of tokens to generate.">?</span></label>
+            <input type="number" id="code-maxlen" value="200" min="50" max="600">
+          </div>
+          <div class="param-group">
+            <label class="param-label">Temperature <span class="tooltip" title="Controls randomness. Lower = more predictable, higher = more creative.">?</span></label>
+            <input type="number" id="code-temp" value="0.8" min="0.1" max="2.0" step="0.1">
+          </div>
+          <div class="param-group">
+            <label class="param-label">Top-p <span class="tooltip" title="Nucleus sampling. Samples from the smallest set of tokens whose cumulative probability exceeds p.">?</span></label>
+            <input type="number" id="code-topp" value="0.9" min="0.1" max="1.0" step="0.05">
+          </div>
+          <div class="param-group">
+            <label class="param-label">Rep. penalty <span class="tooltip" title="Penalises recently used tokens to reduce repetition.">?</span></label>
+            <input type="number" id="code-reppentalty" value="1.5" min="1.0" max="2.0" step="0.1">
+          </div>
+          <button class="run-btn" onclick="runCoding()">Complete</button>
+        </div>
+      </div>
+      <div class="demo-panel">
+        <h3>Completion</h3>
+        <div class="output-area" id="code-output"><span class="output-placeholder">Completion appears here</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="post-page" class="page"></div>
+
+  <div id="writing" class="page">
+    <p class="section-label">WRITING</p>
+    <h2 class="page-title">Build logs and writeups</h2>
+    <div class="blog-list">
+      <div class="blog-item">
+        <p class="blog-tag">MLE · COMING SOON</p>
+        <p class="blog-title">Building a translation transformer from scratch</p>
+        <p class="blog-excerpt">Encoder-decoder architecture, SentencePiece tokenization, training on Opus100, and what medical fine-tuning actually changes in the output distribution.</p>
+      </div>
+      <div class="blog-item">
+        <p class="blog-tag">MLE · COMING SOON</p>
+        <p class="blog-title">70M coding model: pretraining, FIM, and what the model actually learned</p>
+        <p class="blog-excerpt">Two billion tokens on a decoder-only transformer. What worked, what didn't, and why autoregressive beats FIM on this scale.</p>
+      </div>
+      <div class="blog-item">
+        <p class="blog-tag">AI ENGINEER · COMING SOON</p>
+        <p class="blog-title">TLA Advisor: building a RAG system for real users</p>
+        <p class="blog-excerpt">A conversational support assistant for IT staff. Ask it about a building issue and it pulls relevant solutions from an institutional knowledge base. Staff can flag wrong answers — corrections go through a review pipeline and improve future responses over time</p>
+      </div>
+      <div class="blog-item">
+        <p class="blog-tag">AI ENGINEER · COMING SOON</p>
+        <p class="blog-title">GLPI ticket routing: LLMs as middleware</p>
+        <p class="blog-excerpt">Automatically assigns incoming IT support tickets to the right team using a local language model. No manual triage needed — the model reads the ticket, decides who handles it, and updates the ticket in GLPI instantly.</p>
+      </div>
+      <div class="blog-item" onclick="showPage('post/word2vec')" style="cursor:pointer">
+        <p class="blog-tag">FROM SCRATCH</p>
+        <p class="blog-title">Word2Vec from scratch: two implementations, one corpus</p>
+        <p class="blog-excerpt">Skip-gram on Harry Potter, then a faithful replication of Mikolov et al. What the clustering visualizations show about what the model actually learned.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

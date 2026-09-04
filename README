@@ -1,0 +1,35 @@
+# ML Portfolio
+
+A centralized portfolio covering the projects I've built, the ML concepts I've studied, and the engineering decisions behind both. The goal is to give anyone reading it a clear picture of how I think — what I've built, why I built it that way, what I found out along the way, and where my understanding actually sits across machine learning engineering, AI engineering, and software design.
+
+---
+
+## Live Demos
+
+**EN→FR Translation Transformer** — interact with a 30M parameter encoder-decoder transformer trained from scratch. Toggle between the base model and a medical domain fine-tune to see how fine-tuning shifts output distribution.
+
+**70M Coding Model** — autoregressive code completion with a decoder-only transformer pretrained on CodeParrot. Give it a partial Python function and see what it produces.
+
+---
+
+## Projects
+
+**TLA Advisor** — a conversational support assistant for IT staff. Pulls relevant solutions from an institutional knowledge base and improves over time through a human-in-the-loop correction pipeline.
+
+**GLPI Ticket Router** — automatically assigns incoming IT support tickets to the right team using a local language model. No manual triage needed.
+
+**Multimodal Voice Assistant** — voice-first assistant that routes between language and vision modalities based on what the user asks. Whisper for transcription, Qwen3.5:9b for reasoning, XTTS v2 for speech output.
+
+**Report-Wiza** — ward-level municipal service delivery reporting portal for South African residents. Built as a team software engineering project using real SA geographic data from StatsSA and the Electoral Commission.
+
+**Deep learning from scratch** — full neural network with optimizers, CNN, RNN, encoder-decoder, and transformer, all implemented in pure PyTorch.
+
+**Classical ML from scratch** — linear regression and KMeans from first principles with visualizations.
+
+**Word2Vec** — two implementations on a Harry Potter corpus: one from scratch, one replicating the original Mikolov et al. paper.
+
+---
+
+## Writing
+
+Writeups, build logs, and conceptual notes live on the portfolio site. Each covers the decisions behind a project or a concept I worked through — not implementation walkthroughs, but the reasoning and findings behind the work.
