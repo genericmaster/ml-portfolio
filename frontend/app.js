@@ -1,4 +1,4 @@
-const API = 'https://ml-portfolio-1.onrender.com.';
+const API = 'https://ml-portfolio-1.onrender.com';
 
 const CODE_EXAMPLES = [
   "def parse_config(file_path:str):\n    config = {}\n    with open(file_path) as f:\n        for line in f:\n            if line.strip() and not line.startswith('#'):\n                ",
