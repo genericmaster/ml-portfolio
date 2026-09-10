@@ -7,7 +7,6 @@ from huggingface_hub import hf_hub_download
 hf_hub_download('THENDO1977/from-scratch-models', 'translation/transformer_weights.pt')
 hf_hub_download('THENDO1977/from-scratch-models', 'translation/medical_transformer_weights.pt')
 hf_hub_download('THENDO1977/from-scratch-models', 'translation/sp.model')
-hf_hub_download('THENDO1977/from-scratch-models', 'coding/coding_model_weights.pt')
 hf_hub_download('THENDO1977/from-scratch-models', 'coding/coding_model_weights_finetuned.pt')
 hf_hub_download('THENDO1977/from-scratch-models', 'coding/sp.model')
 "
