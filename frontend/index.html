@@ -49,14 +49,25 @@
         <p class="project-title">EN→FR translation transformer</p>
         <p class="project-desc">Encoder-decoder transformer built from scratch, trained on Opus100 (800k+ pairs).
           Fine-tuned on medical domain. 30M parameters.</p>
-        <div class="project-footer"><span class="project-link">→ live demo</span></div>
+        <div class="project-footer">
+          <span class="project-link" onclick="event.stopPropagation(); showPage('translation')">→ live demo</span>
+          <span class="project-link"
+            onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/ml-portfolio')">→
+            GitHub</span>
+        </div>
       </div>
+
       <div class="project-card" onclick="showPage('coding')">
         <span class="project-tag mle">MLE</span>
         <p class="project-title">70M coding model</p>
         <p class="project-desc">Decoder-only transformer pretrained on CodeParrot (~1.7B tokens). Autoregressive code
           completion with FIM training objective.</p>
-        <div class="project-footer"><span class="project-link">→ live demo</span></div>
+        <div class="project-footer">
+          <span class="project-link" onclick="event.stopPropagation(); showPage('coding')">→ live demo</span>
+          <span class="project-link"
+            onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/ml-portfolio')">→
+            GitHub</span>
+        </div>
       </div>
       <div class="project-card no-demo" onclick="window.open('https://github.com/genericmaster/tla-advisor-')">
         <span class="project-tag ai">AI ENGINEER</span>
@@ -90,7 +101,7 @@
         <div class="project-footer"><span class="project-link">→ GitHub</span></div>
       </div>
       <div class="project-card no-demo"
-         onclick="window.open('https://github.com/genericmaster/deep-learning-models-from-scratch')">
+        onclick="window.open('https://github.com/genericmaster/deep-learning-models-from-scratch')">
         <span class="project-tag scratch">FROM SCRATCH</span>
         <p class="project-title">Deep learning from scratch</p>
         <p class="project-desc">Full neural network with optimizers, CNN, RNN, encoder-decoder, and transformer — all
