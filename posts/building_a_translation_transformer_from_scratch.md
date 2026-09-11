@@ -80,7 +80,7 @@ Batch size was chosen based purely on compute constraints — as high as we coul
 
 We trained for **23 epochs** in total.
 
-![Full training run — step, learning rate, and loss](images/full_traning_run_translation.png)
+![Full training run — step, learning rate, and loss](/assets/full_traning_run_translation.png)
 
 The loss drops significantly with every new iteration as the model sees the same input repeatedly, settling from around 10 down toward 2. this is from the first half run as it took 2 days to train the model fully
 
@@ -94,7 +94,8 @@ For formal evaluation we used the **BLEU score**, which borrows from the n-gram 
 
 if you want tro test it check the deep learning from scratch repo i do give guidance on how to run the inference check and blue score check
 
-![Loss curve — full training run](images/loss_transaltion_image.png)
+![Loss curve — full training run](/assets/loss_transaltion_image.png)
+
 
 The model achieved a **BLEU score of 21.28** on the test set. That means it can produce coherent French that sounds sensible, but it's not super accurate. For very long sentences it tends to lose the thread of what it's talking about — a long-term dependency issue that comes down to model capacity and data constraints.
 

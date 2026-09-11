@@ -46,11 +46,11 @@ Most of those assumptions turned out to be wrong.
 
 ## Training Run
 
-![Training run overview](images/training_run_coding_model.png)
+![Training run overview](/assets/training_run_coding_model.png)
 
 The loss curve dropped fast early on, then flattened out. The model hit its floor well before the end of training.
 
-![Loss curve detail](images/loss_coding_model.png)
+![Loss curve detail](/assets/loss_coding_model.png)
 
 That early floor makes sense in hindsight. Code is a formal language — there's no such thing as a "close enough" prediction. In natural language, if the model predicts a slightly different word, the sentence can still be coherent. In code, one wrong token breaks the whole function. A 70M parameter model just doesn't have the capacity to fully encode that kind of strict logical structure. Research backs this up — models under 100M parameters tend to be pattern matchers at best, and even at 100M they're not really reasoning about code. So the loss floor wasn't a training failure, it was a capacity ceiling.
 

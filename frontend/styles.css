@@ -476,3 +476,14 @@ body {
 .post-body li { margin-bottom: 0.4rem; }
 .post-body a { color: #6366F1; text-decoration: underline; }
 .project-tag.se { color: #38BDF8; background: rgba(56, 189, 248, 0.12); }
+
+
+/* Keep markdown images responsive so they don't break out of the layout */
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: var(--radius);
+  border: 0.5px solid var(--border-strong);
+}
