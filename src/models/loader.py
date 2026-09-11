@@ -1,5 +1,4 @@
 import torch as pt
-import torchao
 from functools import lru_cache
 from huggingface_hub import hf_hub_download
 from src.core.config_loader import model_configurator
@@ -27,8 +26,7 @@ def model_loader(model_name: str, variant: str):
     model.load_state_dict(trained_weights)
     del trained_weights  # ← free the buffer immediately
     model.eval() 
-    model = model.half()
-    torchao.quantize_(model, torchao.int8_weight_only())
+    model = model.half()  #quantizes to float 16
     return model
     
 
