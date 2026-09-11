@@ -10,6 +10,10 @@ A centralized portfolio covering the projects I've built, the ML concepts I've s
 
 **70M Coding Model** — autoregressive code completion with a decoder-only transformer pretrained on CodeParrot. Give it a partial Python function and see what it produces.
 
+
+## if you want more info on how i trained and monitored this 2 models above use this link to get access to the writeups i made on it going through data preprocessing , building model from scratch , training it and evaluating how well they both performed 
+
+model training scripts also exist in the notebook folder of this repo if your interested at looking at the actual code
 ---
 
 ## Projects
