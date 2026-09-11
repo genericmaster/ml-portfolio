@@ -25,7 +25,8 @@ def model_loader(model_name: str, variant: str):
     trained_weights = pt.load(model_weights, map_location=pt.device('cpu'), mmap=True)
     model.load_state_dict(trained_weights)
     del trained_weights  # ← free the buffer immediately
-    model.eval()         # ← good practice, stops gradient tracking overhead
+    model.eval() 
+    model = model.half()  # ← good practice, stops gradient tracking overhead
     return model
     
 
