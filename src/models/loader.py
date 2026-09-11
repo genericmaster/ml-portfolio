@@ -27,6 +27,7 @@ def model_loader(model_name: str, variant: str):
     model.load_state_dict(trained_weights)
     del trained_weights  # ← free the buffer immediately
     model.eval() 
+    model = model.half()
     torchao.quantize_(model, torchao.int8_weight_only())
     return model
     
