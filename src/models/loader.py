@@ -19,13 +19,14 @@ def _instatiate_model(config_param,model_name):
         return CodingModel(**config_param)
 
 @lru_cache
-def model_loader(model_name:str,variant:str):
-    model_dict,model_weights=download_model(model_name=model_name,variant=variant)
-    model= _instatiate_model(config_param=model_dict,model_name=model_name)
-    trained_weights=pt.load(model_weights,map_location=pt.device('cpu'))
+def model_loader(model_name: str, variant: str):
+    model_dict, model_weights = download_model(model_name=model_name, variant=variant)
+    model = _instatiate_model(config_param=model_dict, model_name=model_name)
+    trained_weights = pt.load(model_weights, map_location=pt.device('cpu'), mmap=True)
     model.load_state_dict(trained_weights)
+    del trained_weights  # ← free the buffer immediately
+    model.eval()         # ← good practice, stops gradient tracking overhead
     return model
-    
     
 
     
