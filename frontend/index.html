@@ -37,119 +37,141 @@
     <div class="hero">
       <p class="hero-eyebrow">ML ENGINEER · AI ENGINEER · JOHANNESBURG</p>
       <h1 class="hero-name">Rakhivhani<br>Thendo</h1>
-      <p class="hero-bio">> I'm obsessed with understanding how machine learning systems actually work at a fundamental level — so I build them from scratch. Training transformers, designing pipelines, stitching models together into systems that can actually do something intelligent. Finishing a BSc Computer Science at Wits University.</p>
+      <p class="hero-bio">> I'm obsessed with understanding how machine learning systems actually work at a fundamental
+        level — so I build them from scratch. Training transformers, designing pipelines, stitching models together into
+        systems that can actually do something intelligent. Finishing a BSc Computer Science at Wits University.</p>
       <div class="hero-links">
         <button class="primary" onclick="showPage('translation')">Try the demos</button>
         <button onclick="showPage('writing')">Read the writeups</button>
         <button onclick="window.open('https://github.com/THENDO1977')">GitHub</button>
         <button onclick="window.open('https://huggingface.co/THENDO1977')">Hugging Face</button>
+        <button onclick="window.open('https://www.linkedin.com/in/thendo-rakhivhani-3096b4429/')">LinkedIn</button>
+        <button onclick="window.open('mailto:rakhivhanithendo@gmail.com')">Email</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">PROJECTS</p>
+  <div class="project-grid">
+    <div class="project-card" onclick="showPage('translation')">
+      <span class="project-tag mle">MLE</span>
+      <p class="project-title">EN→FR translation transformer</p>
+      <p class="project-desc">Encoder-decoder transformer built from scratch, trained on Opus100 (800k+ pairs).
+        Fine-tuned on medical domain. 30M parameters.</p>
+      <div class="project-footer">
+        <span class="project-link" onclick="event.stopPropagation(); showPage('translation')">→ live demo</span>
+        <span class="project-link"
+          onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/ml-portfolio')">→
+          GitHub</span>
       </div>
     </div>
 
-    <p class="section-label">PROJECTS</p>
-    <div class="project-grid">
-      <div class="project-card" onclick="showPage('translation')">
-        <span class="project-tag mle">MLE</span>
-        <p class="project-title">EN→FR translation transformer</p>
-        <p class="project-desc">Encoder-decoder transformer built from scratch, trained on Opus100 (800k+ pairs).
-          Fine-tuned on medical domain. 30M parameters.</p>
-        <div class="project-footer">
-          <span class="project-link" onclick="event.stopPropagation(); showPage('translation')">→ live demo</span>
-          <span class="project-link"
-            onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/ml-portfolio')">→ GitHub</span>
-        </div>
-      </div>
-
-      <div class="project-card" onclick="showPage('coding')">
-        <span class="project-tag mle">MLE</span>
-        <p class="project-title">70M coding model</p>
-        <p class="project-desc">Decoder-only transformer pretrained on CodeParrot (~1.7B tokens). Autoregressive code
-          completion with FIM training objective.</p>
-        <div class="project-footer">
-          <span class="project-link" onclick="event.stopPropagation(); showPage('coding')">→ live demo</span>
-          <span class="project-link"
-            onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/ml-portfolio')">→ GitHub</span>
-        </div>
-      </div>
-
-      <div class="project-card no-demo" onclick="window.open('https://github.com/genericmaster/tla-advisor-')">
-        <span class="project-tag ai">AI ENGINEER</span>
-        <p class="project-title">TLA Advisor</p>
-        <p class="project-desc">A conversational support assistant for IT staff. Ask it about a building issue and it
-          pulls relevant solutions from an institutional knowledge base. Staff can flag wrong answers — corrections go
-          through a review pipeline and improve future responses over time.</p>
-        <div class="project-footer">
-          <span class="project-link" onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/tla-advisor-')">→ GitHub</span>
-          <span class="project-link" onclick="event.stopPropagation(); window.open('https://youtu.be/oZHWEERjXD0')">→ video demo</span>
-        </div>
-      </div>
-
-      <div class="project-card no-demo" onclick="window.open('https://github.com/genericmaster/ticket-router-glpi')">
-        <span class="project-tag ai">AI ENGINEER</span>
-        <p class="project-title">GLPI ticket router</p>
-        <p class="project-desc">Automatically assigns incoming IT support tickets to the right team using a local
-          language model. No manual triage needed — the model reads the ticket, decides who handles it, and updates the
-          ticket in GLPI instantly.</p>
-        <div class="project-footer">
-          <span class="project-link" onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/ticket-router-glpi')">→ GitHub</span>
-          <span class="project-link" onclick="event.stopPropagation(); window.open('https://youtu.be/mDDmodLWgmY')">→ video demo</span>
-        </div>
-      </div>
-
-      <div class="project-card no-demo" onclick="window.open('https://github.com/genericmaster/speech-model')">
-        <span class="project-tag ai">AI ENGINEER</span>
-        <p class="project-title">Multimodal voice assistant</p>
-        <p class="project-desc">Experimental voice model with vision capabilities using local language and vision
-          language models to have an assistant that can speak and also tell you what's in your background.</p>
-        <div class="project-footer">
-          <span class="project-link" onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/speech-model')">→ GitHub</span>
-          <span class="project-link" onclick="event.stopPropagation(); window.open('https://youtu.be/HEYbVpRJBIQ')">→ video demo</span>
-        </div>
-      </div>
-
-      <div class="project-card no-demo" onclick="window.open('https://github.com/BUBS-Wits/report-wiza')">
-        <span class="project-tag se">SOFTWARE ENGINEERING</span>
-        <p class="project-title">Report-Wiza</p>
-        <p class="project-desc">Ward-level municipal service delivery reporting portal built for South African
-          residents. React + Node.js + Firebase + Azure. Real SA ward boundary data via StatsSA and Electoral Commission
-          APIs.</p>
-        <div class="project-footer">
-          <span class="project-link" onclick="event.stopPropagation(); window.open('https://github.com/BUBS-Wits/report-wiza')">→ GitHub</span>
-        </div>
-      </div>
-
-      <div class="project-card no-demo"
-        onclick="window.open('https://github.com/genericmaster/deep-learning-models-from-scratch')">
-        <span class="project-tag scratch">FROM SCRATCH</span>
-        <p class="project-title">Deep learning from scratch</p>
-        <p class="project-desc">Full neural network with optimizers, CNN, RNN, encoder-decoder, and transformer — all
-          implemented in pure PyTorch with no high-level abstractions.</p>
-        <div class="project-footer">
-          <span class="project-link" onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/deep-learning-models-from-scratch')">→ GitHub</span>
-        </div>
-      </div>
-
-      <div class="project-card no-demo"
-        onclick="window.open('https://github.com/genericmaster/classical-ml-models-from-scratch')">
-        <span class="project-tag scratch">FROM SCRATCH</span>
-        <p class="project-title">Classical ML from scratch</p>
-        <p class="project-desc">Linear regression and KMeans implemented from first principles. Includes visualizations
-          of decision boundaries and cluster convergence.</p>
-        <div class="project-footer">
-          <span class="project-link" onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/classical-ml-models-from-scratch')">→ GitHub</span>
-        </div>
-      </div>
-
-      <div class="project-card no-demo" onclick="window.open('https://github.com/genericmaster/word2vec')">
-        <span class="project-tag scratch">FROM SCRATCH</span>
-        <p class="project-title">Word2Vec — two implementations</p>
-        <p class="project-desc">Skip-gram Word2Vec from scratch on a Harry Potter corpus, plus a faithful replication of
-          the original Mikolov et al. paper. Includes 2D dimensionality-reduced cluster visualizations.</p>
-        <div class="project-footer">
-          <span class="project-link" onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/word2vec')">→ GitHub</span>
-        </div>
+    <div class="project-card" onclick="showPage('coding')">
+      <span class="project-tag mle">MLE</span>
+      <p class="project-title">70M coding model</p>
+      <p class="project-desc">Decoder-only transformer pretrained on CodeParrot (~1.7B tokens). Autoregressive code
+        completion with FIM training objective.</p>
+      <div class="project-footer">
+        <span class="project-link" onclick="event.stopPropagation(); showPage('coding')">→ live demo</span>
+        <span class="project-link"
+          onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/ml-portfolio')">→
+          GitHub</span>
       </div>
     </div>
+
+    <div class="project-card no-demo" onclick="window.open('https://github.com/genericmaster/tla-advisor-')">
+      <span class="project-tag ai">AI ENGINEER</span>
+      <p class="project-title">TLA Advisor</p>
+      <p class="project-desc">A conversational support assistant for IT staff. Ask it about a building issue and it
+        pulls relevant solutions from an institutional knowledge base. Staff can flag wrong answers — corrections go
+        through a review pipeline and improve future responses over time.</p>
+      <div class="project-footer">
+        <span class="project-link"
+          onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/tla-advisor-')">→
+          GitHub</span>
+        <span class="project-link" onclick="event.stopPropagation(); window.open('https://youtu.be/oZHWEERjXD0')">→
+          video demo</span>
+      </div>
+    </div>
+
+    <div class="project-card no-demo" onclick="window.open('https://github.com/genericmaster/ticket-router-glpi')">
+      <span class="project-tag ai">AI ENGINEER</span>
+      <p class="project-title">GLPI ticket router</p>
+      <p class="project-desc">Automatically assigns incoming IT support tickets to the right team using a local
+        language model. No manual triage needed — the model reads the ticket, decides who handles it, and updates the
+        ticket in GLPI instantly.</p>
+      <div class="project-footer">
+        <span class="project-link"
+          onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/ticket-router-glpi')">→
+          GitHub</span>
+        <span class="project-link" onclick="event.stopPropagation(); window.open('https://youtu.be/mDDmodLWgmY')">→
+          video demo</span>
+      </div>
+    </div>
+
+    <div class="project-card no-demo" onclick="window.open('https://github.com/genericmaster/speech-model')">
+      <span class="project-tag ai">AI ENGINEER</span>
+      <p class="project-title">Multimodal voice assistant</p>
+      <p class="project-desc">Experimental voice model with vision capabilities using local language and vision
+        language models to have an assistant that can speak and also tell you what's in your background.</p>
+      <div class="project-footer">
+        <span class="project-link"
+          onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/speech-model')">→
+          GitHub</span>
+        <span class="project-link" onclick="event.stopPropagation(); window.open('https://youtu.be/HEYbVpRJBIQ')">→
+          video demo</span>
+      </div>
+    </div>
+
+    <div class="project-card no-demo" onclick="window.open('https://github.com/BUBS-Wits/report-wiza')">
+      <span class="project-tag se">SOFTWARE ENGINEERING</span>
+      <p class="project-title">Report-Wiza</p>
+      <p class="project-desc">Ward-level municipal service delivery reporting portal built for South African
+        residents. React + Node.js + Firebase + Azure. Real SA ward boundary data via StatsSA and Electoral Commission
+        APIs.</p>
+      <div class="project-footer">
+        <span class="project-link"
+          onclick="event.stopPropagation(); window.open('https://github.com/BUBS-Wits/report-wiza')">→ GitHub</span>
+      </div>
+    </div>
+
+    <div class="project-card no-demo"
+      onclick="window.open('https://github.com/genericmaster/deep-learning-models-from-scratch')">
+      <span class="project-tag scratch">FROM SCRATCH</span>
+      <p class="project-title">Deep learning from scratch</p>
+      <p class="project-desc">Full neural network with optimizers, CNN, RNN, encoder-decoder, and transformer — all
+        implemented in pure PyTorch with no high-level abstractions.</p>
+      <div class="project-footer">
+        <span class="project-link"
+          onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/deep-learning-models-from-scratch')">→
+          GitHub</span>
+      </div>
+    </div>
+
+    <div class="project-card no-demo"
+      onclick="window.open('https://github.com/genericmaster/classical-ml-models-from-scratch')">
+      <span class="project-tag scratch">FROM SCRATCH</span>
+      <p class="project-title">Classical ML from scratch</p>
+      <p class="project-desc">Linear regression and KMeans implemented from first principles. Includes visualizations
+        of decision boundaries and cluster convergence.</p>
+      <div class="project-footer">
+        <span class="project-link"
+          onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/classical-ml-models-from-scratch')">→
+          GitHub</span>
+      </div>
+    </div>
+
+    <div class="project-card no-demo" onclick="window.open('https://github.com/genericmaster/word2vec')">
+      <span class="project-tag scratch">FROM SCRATCH</span>
+      <p class="project-title">Word2Vec — two implementations</p>
+      <p class="project-desc">Skip-gram Word2Vec from scratch on a Harry Potter corpus, plus a faithful replication of
+        the original Mikolov et al. paper. Includes 2D dimensionality-reduced cluster visualizations.</p>
+      <div class="project-footer">
+        <span class="project-link"
+          onclick="event.stopPropagation(); window.open('https://github.com/genericmaster/word2vec')">→ GitHub</span>
+      </div>
+    </div>
+  </div>
   </div>
 
   <div id="translation" class="page">
